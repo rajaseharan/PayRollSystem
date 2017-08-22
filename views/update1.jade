@@ -1,0 +1,190 @@
+doctype html
+html
+    style.
+        label{
+            margin-left:35%;
+        }
+        .nm0{
+            margin-left:60px;
+        }
+        .nm1{
+            margin-left:85px;
+        }
+        .nm2{margin-left:44px;
+        }
+        .nm3{
+            margin-left:64px;
+        }
+        .nm4{
+            margin-left:58px;
+        }
+        .nm5{
+            margin-left:90px;
+        }
+        .nm6{
+            margin-left:90px;
+        }
+        .nm7{
+            margin-left:94px;
+        }
+        .nm8{
+            margin-left:20px;
+        }
+        .nm9{
+            margin-left:20px;
+        }
+        .nm10{margin-left:75px;
+        }
+        .nm11{
+            margin-left:79px;
+        }
+        .nm12{
+            margin-left:48px;
+        }
+        .nm13{
+            margin-left:90px;
+        }
+        .bt19{
+            background-color:#ccccff;
+            height:30px;
+            width:7%;
+            margin-left:49%;
+            font-size:20px}
+        .bt1{
+            background-color:#ccccff;
+            height:30px;
+            width:7%;
+            margin-left:2%;
+            font-size:20px}
+    script(language='javascript').
+        function validateForm() {
+            var x = document.forms["form0"]["EMP_ID"].value;
+            var q = document.forms["form0"]["FAT_NAME"].value;
+            var w = document.forms["form0"]["BLOOD_GRP"].value;
+            var e = document.forms["form0"]["BLOOD_GRP"].value;
+            var r = document.forms["form0"]["DOB"].value;
+            var t = document.forms["form0"]["GENDER"].value;
+            var y = document.forms["form0"]["PERM_ADD"].value;
+            var u = document.forms["form0"]["RES_ADD"].value;
+            var i = document.forms["form0"]["EMP_NAME"].value;
+            var o = document.forms["form0"]["AADHAR_NO"].value;
+            var p = document.forms["form0"]["PHN_NO"].value;
+
+
+            var a = document.forms['form0']['ALT_NO'].value;
+            if (x == "") {
+                alert("all fields must be filled out");
+                return false;
+            }
+            if (y == "") {
+                alert("all fields must be filled out");
+                return false;
+            }
+            if (w == "") {
+                alert("all fields must be filled out");
+                return false;
+            }
+            if (e == "") {
+                alert("all fields must be filled out");
+                return false;
+            }
+            if (r == "") {
+                alert("all fields must be filled out");
+                return false;
+            }
+            if (t == "") {
+                alert("all fields must be filled out");
+                return false;
+            }
+            if (u == "") {
+                alert("all fields must be filled out");
+                return false;
+            }
+            if (i == "") {
+                alert("all fields must be filled out");
+                return false;
+            }
+            if (o == "") {
+                alert("all fields must be filled out");
+                return false;
+            }
+            if (p == "") {
+                alert("all fields must be filled out");
+                return false;
+            }
+            if (a == "") {
+                alert("all fields must be filled out");
+                return false;
+            }
+            if (q == "") {
+                alert("all fields must be filled out");
+                return false;
+            }
+        }
+    body(style='background-color:#F2F3F4')
+        center
+            header(style='background-color:#5F6A6A;color:white; height:10%;font-size:44px;') ADD EMPLOYEE DETAIL    S
+        form(method='post' action='/view_details' name='form0' onsubmit='return validateForm()')
+            br
+            br
+            label  Emp_Id  :
+            input.nm1(type='text', name='EMP_ID', size='32')
+            br
+            br
+            label  Emp_Name  :
+            input.nm0(type='text', name='EMP_NAME', size='32')
+            br
+            br
+            label Father's Name :
+            input.nm2(type='text', name='FAT_NAME', size='32')
+            br
+            br
+            label  Nationality :
+            input.nm3(type='text', name='L_Name', size='32')
+            br
+            br
+            label Blood Group:
+            input.nm4(type='text', name='BLOOD_GRP', size='32')
+            br
+            br
+            label Position:
+            input.nm5(type='text', name='POSITION', size='32')
+            br
+            br
+            label  D.  O. B :
+            input.nm6(type='date', name='DOB', size='32')
+            br
+            br
+            label  Gender:-
+            input.nm7(type='Radio', name='GENDER', value='Male')
+            | Male
+            input.rd(type='Radio', name='GENDER', value='Female')
+            | Female
+            br
+            br
+            label Permanent Address:
+            input.nm8(type='text', name='PERM_ADD', size='32')
+            br
+            br
+            label Temporary Address:
+            input.nm9(type='text', name='RES_ADD', size='32')
+            br
+            br
+            label   Aadhar No:
+            input.nm10(type='text', name='AADHAR_NO', size='32')
+            br
+            br
+            label  Phone No.:
+            input.nm11(type='text', name='PHN_NO', size='32')
+            br
+            br
+            label Emergency No.:
+            input.nm12(type='text', name='ALT_NO', size='32')
+            br
+            br
+            label Email_Id:
+            input.nm13(type='email', name='EMAIL_ID', size='32')
+            br
+            br
+
+            input.bt19(type='submit', value='Save')

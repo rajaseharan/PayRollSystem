@@ -1,0 +1,83 @@
+html
+    head
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+        // Optional theme
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', integrity='sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp', crossorigin='anonymous')
+        link(href='/bootstrap/js/bootstrap.min.js', rel='javascript')
+        link(href='/bootstrap/js/bootstrap.js', rel='javascript')
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+        // Latest compiled and minified JavaScript
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+        script(type='text/javascript' src ='/javascripts/forRoutes.js')
+    script.
+        function validateForm() {
+            var x = document.forms["myForm"]["F_Name"].value;
+
+            if (x == "") {
+                alert("input must be filled out");
+                return false;
+            }
+        }
+    script
+    body
+        nav.navbar.navbar-inverse
+            .container-fluid
+                // Brand and toggle get grouped for better mobile display
+                .navbar-header
+                    a.navbar-brand(href='#')
+                        img(alt='Brand', src='http://localhost:3000/images/2.png')
+                    a.navbar-brand(href='#') Payroll System
+                // Collect the nav links, forms, and other content for toggling
+            // /.container-fluid
+        .container
+                   form(name='form1', ,='', method='post', action='/emp_menu')
+                      input(type='hidden', name='em', value='admin')
+                      input(type='hidden', name='ps', value='admin')
+                      button.btn.btn-success.btn-lg(type='submit', onclick='empmenu()', style='margin-left:-50px') Main Menu
+                        button.btn.btn-link.btn-lg(type='button', onclick ='index()', style='margin-left:961px') Sign Out
+
+                .col-sm-9
+                    br
+                    br
+                    br
+
+                    #myCarousel.carousel.slide(data-ride='carousel')
+                        // Indicators
+                        ol.carousel-indicators
+                            li.active(data-target='#myCarousel', data-slide-to='0')
+                            li(data-target='#myCarousel', data-slide-to='1')
+                            li(data-target='#myCarousel', data-slide-to='2')
+                        // Wrapper for slides
+                        .carousel-inner
+                            .item.active
+                                img(src='http://localhost:3000/images/11.jpg', alt='Los Angeles', style='width:100% ;height:60%;')
+                            .item
+                                img(src='http://localhost:3000/images/22.jpg', alt='Chicago', style='width:100%;height:60%;')
+                            .item
+                                img(src='http://localhost:3000/images/33.jpg', alt='New york', style='width:100%;height:60%;')
+                        // Left and right controls
+                        a.left.carousel-control(href='#myCarousel', data-slide='prev')
+                            span.glyphicon.glyphicon-chevron-left
+                            span.sr-only Previous
+                        a.right.carousel-control(href='#myCarousel', data-slide='next')
+                            span.glyphicon.glyphicon-chevron-right
+                            span.sr-only Next
+
+                .col-sm-3
+                    br
+                    br
+
+                    img.img-square(src='http://localhost:3000/images/1.png', alt='...')
+
+                    if search_error
+                        .p.text-left.text-danger  #{search_error}
+                    br
+
+                    form(name='form0', ,='', method='post', action='/view_details', onsubmit="return validateForm()")
+                        label(for='search') Enter Emp_Id
+                        input#search.form-control(type='text', placeholder='Emp_Id' name='EMP_ID')
+                        br
+                        button.btn.btn-default(type='submit', name='next') Search
+

@@ -1,0 +1,62 @@
+doctype html
+html
+    head
+        script(type='text/javascript' src ='/javascripts/forRoutes.js')
+    style.
+        label{
+            margin-left:44%;
+            font-weight: bold;
+        }
+        .bt1{
+            background-color:#ccccff;
+            height:23px;
+            width:6%;
+            margin-left:44%;
+            font-size:18px}
+        .bt19{
+            background-color:#ccccff;
+            height:23px;
+            width:6%;
+            margin-left:2%;
+            font-size:18px}
+    center
+        form(name='form1', ,='', method='post', action='/emp_menu')
+            input(type='hidden', name='em', value='admin')
+            input(type='hidden', name='ps', value='admin')
+            br
+            button.btn.btn-success.btn-lg(type='submit', onclick='empmenu()', style='margin-left:-5px') Main Menu
+                button.btn.btn-primary.btn-lg(type='button', onclick ='index()', style='margin-left:1065px;background-color:green;color:white') Sign Out
+        br
+        header(style='background-color:#5F6A6A;color:white; height:5%;font-size:33px;') GROSS PAY
+    br
+    br
+    body(style='background-color:#F2F3F4')
+
+            br
+            label Emp_id:
+            ="  "
+            a=empid
+            br
+            br
+            label Basic pay:
+            ="  "
+            a=bpay
+            br
+            br
+            label Allowance:
+            ="  "
+            a=allw
+            br
+            br
+            label Deduction:
+            ="  "
+            a=ded
+            br
+            br
+            label Total:
+            ="  "
+            a=total
+            br
+            br
+
+    html

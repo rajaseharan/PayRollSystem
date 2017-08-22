@@ -1,0 +1,238 @@
+doctype htmlc
+html
+    head
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+        // Optional theme
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', integrity='sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp', crossorigin='anonymous')
+        link(href='/bootstrap/js/bootstrap.min.js', rel='javascript')
+        link(href='/bootstrap/js/bootstrap.js', rel='javascript')
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+        // Latest compiled and minified JavaScript
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+        script(type='text/javascript' src ='/javascripts/forRoutes.js')
+
+    style.
+        label{
+            margin-left:40%;
+            font-weight: bold;
+        }
+        .nm1{
+            margin-left:85px;
+        }
+        .nm2{margin-left:44px;
+        }
+        .nm3{
+            margin-left:64px;
+        }
+        .nm4{
+            margin-left:58px;
+        }
+        .nm5{
+            margin-left:90px;
+        }
+        .nm6{
+            margin-left:90px;
+        }
+        .nm7{
+            margin-left:94px;
+        }
+        .nm8{
+            margin-left:20px;
+        }
+        .nm9{
+            margin-left:30px;
+        }
+        .nm10{margin-left:75px;
+        }
+        .nm11{
+            margin-left:79px;
+        }
+        .nm12{
+            margin-left:48px;
+        }
+        .nm13{
+            margin-left:90px;
+        }
+        .bt19{
+            height:30px;
+            width:7%;
+            margin-left:49%;
+            font-size:20px}
+        .bt1{
+            height:30px;
+            width:7%;
+            margin-left:2%;
+            font-size:20px}
+    body
+        nav.navbar.navbar-inverse
+            .container-fluid
+                // Brand and toggle get grouped for better mobile display
+                .navbar-header
+                    a.navbar-brand(href='#')
+                        img(alt='Brand', src='http://localhost:3000/images/2.png')
+                    a.navbar-brand(href='#') Payroll System
+                // Collect the nav links, forms, and other content for toggling
+            // /.container-fluid
+        form(name='form1', ,='', method='post', action='/emp_menu')
+            input(type='hidden', name='em', value='admin')
+            input(type='hidden', name='ps', value='admin')
+            button.btn.btn-success.btn-lg(type='submit', onclick='empmenu()', style='margin-left:50px') Main Menu
+                button.btn.btn-link.btn-lg(type='button', onclick ='index()', style='margin-left:900px') Sign Out
+
+                if success_msg
+                    .b.text-center(style='color:green;font-size:129%')   #{success_msg}
+
+        form(method='post' action='/search')
+            if !success_msg
+              button.btn.btn-default(type='submit', style = 'margin-left:1050px') Back To Search
+            table(align='center')
+                tbody
+                  tr
+                    td(height='30')
+                      b Emp_ID
+                    td
+                    td(height='30')
+                     b :
+                    td
+                    td(height='30')
+                        a=EMP_ID
+                    td
+                  tr
+                  tr
+                    td(height='30')
+                       b Emp_Name
+                    td
+                    td(height='30')
+                     b :
+                    td
+                    td(height='30')
+                        a=EMP_NAME
+                    td
+                  tr
+                      tr
+                          td(height='30')
+                              b Father's Name
+                          td
+                          td(height='30')
+                              b :
+                          td
+                          td(height='30')
+                              a=FAT_NAME
+                          td
+                      tr
+                    tr
+                        td(height='30')
+                            b Blood Group
+                        td
+                        td(height='30')
+                            b :
+                        td
+                        td(height='30')
+                            a=BLOOD_GRP
+                        td
+                    tr
+                    tr
+                        td(height='30')
+                            b Position
+                        td
+                        td(height='30')
+                            b :
+                        td
+                        td(height='30')
+                            a=POSITION
+                        td
+                    tr
+                    tr
+                        td(height='30')
+                            b D.  O. B
+                        td
+                        td(height='30')
+                            b :
+                        td
+                        td(height='30')
+                            a=DOB
+                        td
+                    tr
+                    tr
+                        td(height='30')
+                            b Gender
+                        td
+                        td(height='30')
+                            b :
+                        td
+                        td(height='30')
+                            a=GENDER
+                        td
+                    tr
+                    tr
+                        td(height='30')
+                            b Permanent Address
+                        td
+                        td(height='30')
+                            b :
+                        td
+                        td(height='30')
+                            a=PERM_ADD
+                        td
+                    tr
+                    tr
+                        td(height='30')
+                            b Temporary Address
+                        td
+                        td(height='30')
+                            b :
+                        td
+                        td(height='30')
+                            a=RES_ADD
+                        td
+                    tr
+                    tr
+                        td(height='30')
+                            b Aadhar No
+                        td
+                        td(height='30')
+                            b :
+                        td
+                        td(height='30')
+                            a=AADHAR_NO
+                        td
+                    tr
+                    tr
+                        td(height='30')
+                            b Phone No.
+                        td
+                        td(height='30')
+                            b :
+                        td
+                        td(height='30')
+                            a=PHN_NO
+                        td
+                    tr
+                    tr
+                        td(height='30')
+                            b Emergency No.
+                        td
+                        td(height='30')
+                            b :
+                        td
+                        td(height='30')
+                            a=ALT_NO
+                        td
+                    tr
+                    tr
+                        td(height='30')
+                            b Email_Id
+                        td
+                        td(height='30')
+                            b :
+                        td
+                        td(height='30')
+                            a=EMAIL_ID
+                        td
+                    tr
+                tbody
+            table
+
+        form

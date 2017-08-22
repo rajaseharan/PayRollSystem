@@ -1,0 +1,58 @@
+html
+    head
+            link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+            // Optional theme
+            link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', integrity='sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp', crossorigin='anonymous')
+            // Latest compiled and minified JavaScript
+            script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+            link(href='/stylesheets/style.css', rel='stylesheet')
+            script(type='text/javascript' src ='/javascripts/forRoutes.js')
+
+
+    nav.navbar.navbar-inverse
+            .container-fluid
+                // Brand and toggle get grouped for better mobile display
+                .navbar-header
+                    a.navbar-brand(href='#')
+                        img(alt='Brand', src='http://localhost:3000/images/2.png')
+                    a.navbar-brand(href='#') Payroll System
+                // Collect the nav links, forms, and other content for toggling
+
+                // /.navbar-collapse
+            // /.container-fluid
+        .container
+            button.btn.btn-link.btn-lg(type='button', onclick ='index()', style='margin-left:1050px') Sign Out
+            h1
+        .page-header.bold
+            h1 Payroll System
+
+        .col-md-8
+            p.lead
+                | The project is built to manage companies’ employees personal as well as to calculate the salary of the employees.
+            p.lead
+                | The website is built only for the administration of the company, this is not built for the employees and hence there is only admin login.
+            h2.page-header  Search Employee Details
+            p.lead
+                | This page is used to search the details of the employee using their employee number or Id.This page consists of simple validation like invalid input or not input which is done using JavaScript.
+                button.btn.btn-link.btn-lg(type='button', onclick='searchfor()') Click_Here
+                |  to search the details
+            h2.page-header  Add/Update Employee Details
+            p.lead
+                | In this page you can add or update the employee details based on their employee id or number. You can Add the basic details of the employee. This page also consists of basic validation like email validation and the phone no validation etc. which are done using client side scripting JavaScript.
+                button.btn.btn-link.btn-lg(type='button',onclick='psign()') Click_Here
+                |  to add or update the details
+            h2.page-header  Salary Calculations
+            p.lead
+                | The Salary calculations consists two forms mainly using which the salary of the Employees are calculated. The first page under this section is Deductions in which the deductions of the employee are calculated and the second page is Allowance in which the allowances are calculated. Here also basic validations are done using javascript and the server side scripting used here is node.js and the database used here is mongodb.
+                button.btn.btn-link.btn-lg(type='button',onclick='ded()') Click_Here
+                |  to calculate the salary
+        .col-md-4
+            .btn-group-vertical.btn-group-lg(role='group', aria-label='...')
+                br
+                br
+                button.btn.btn-primary.btn-lg(type='button', onclick='searchfor()') SEARCH EMPLOYEE
+                br
+                button.btn.btn-primary.btn-lg(type='button',onclick='psign()') ADD EMPLOYEE
+                br
+                button.btn.btn-primary.btn-lg.btn-cons(type='button',onclick='ded()') SALARY CALCULATION
+                br

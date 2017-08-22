@@ -1,0 +1,70 @@
+html
+  style.
+    .page-header {
+      background: grey;
+      color: white;
+    }
+
+    style.
+    p1 {
+      background: center;
+      color: maroon;
+    }
+
+  head
+    // Latest compiled and minified CSS
+
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    // Optional theme
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', integrity='sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp', crossorigin='anonymous')
+    // Latest compiled and minified JavaScript
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+    link(href='stylesheets/style.css', rel='stylesheet')
+  body
+  nav.navbar.navbar-inverse
+    .container-fluid
+      // Brand and toggle get grouped for better mobile display
+      .navbar-header
+        a.navbar-brand(href='#')
+          img(alt='Brand', src='http://localhost:3000/images/2.png')
+        a.navbar-brand(href='#') Payroll System
+      // Collect the nav links, forms, and other content for toggling
+
+      // /.navbar-collapse
+    // /.container-fluid
+
+  .container
+      br
+      img.img-square.center-block(src='http://localhost:3000/images/1.png', alt='...')
+      br
+     fieldset
+         legend(style='padding-left: 600px') Login
+    if login_error
+      .p.text-center.text-danger  #{login_error}
+    .col-md-50.col-md-offset-4
+      form.form-horizontal(id='login-form',method='post',action='http://127.0.0.1:3000/emp_menu')
+        br
+        .form-group
+          label.col-sm-2.control-label(for='inputEmail3') Email
+          .col-sm-3
+            .input-group
+              .input-group-addon @
+              input#inputEmail3.form-control(type='text',name='em' placeholder='Email' autofocus=)
+        .form-group
+          label.col-sm-2.control-label(for='inputPassword3') Password
+          .col-sm-3
+            .input-group
+              .input-group-addon
+                i.glyphicon.glyphicon-lock
+              input#inputPassword3.form-control(type='password',name='ps', placeholder='Password')
+        .form-group
+          .col-sm-offset-2.col-sm-10
+            .checkbox
+              label
+                input(type='checkbox')
+                |  Remember me
+        .form-group
+          .col-sm-offset-2.col-sm-10
+            button.btn.btn-default(type='submit', style='margin-left:30px') Sign in
+
+
